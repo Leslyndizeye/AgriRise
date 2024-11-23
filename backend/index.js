@@ -131,6 +131,11 @@ const User = mongoose.model('User', {
     password: {
         type: String,
     },
+    role: {
+        type: String,
+        default: "user",
+    },
+
     cartData: {
         type:Object,
     },
@@ -177,7 +182,17 @@ app.post('/login', async (req, res) => {
                 }
             }
             const token = jwt.sign(data, 'secret_ecom');
-            res.json({success:true, token});
+            res.json({
+                success: true,
+                token,
+                user: {
+                    id: "user_id",
+                    name: "User Name",
+                    email: "user@example.com",
+                    role: "user",
+                    date: "2024-11-23T00:00:00.000Z"
+                }
+            });
         } else {
             res.json({success:false, errors:"Wrong Password"});
         }
@@ -194,11 +209,11 @@ app.get('/newcollections', async(req, res)=>{
 })
 
 app.get('/popularproducts', async (req, res) => {
-    let products = await Product.find({ "category": { "$regex": "^men$", "$options": "i" }});
+    let products = await Product.find({ "category": "Vegetables"});
     let popularproducts = products.slice(0, 4); 
     console.log("Popular Products Fetched");
     res.send(popularproducts);
-});
+})
 
 const fetchUser = async (req, res, next) => {
     const token = req.header('auth-token');
@@ -234,11 +249,21 @@ const fetchUser = async (req, res, next) => {
             res.send("Removed");
         });
 
-        app.post('/getcart', fetchUser, async(req, res)=> {
+        app.post('/getcart', fetchUser, async (req, res) => {
             console.log('Get cart');
-            let userData = await User.findOne({_id: req.user.id});
-            res.json(userData.cartData);
-        })
+            try {
+                let userData = await User.findOne({ _id: req.user.id });
+                console.log('User Data:', userData); // Log the user data for debugging
+                if (!userData) {
+                    return res.status(404).json({ error: "User not found" });
+                }
+                res.json(userData.cartData);
+            } catch (err) {
+                console.error("Error in getcart:", err);
+                res.status(500).json({ error: "Internal Server Error" });
+            }
+        });
+        
 
 app.listen(port, (error) => {
     if(!error) {

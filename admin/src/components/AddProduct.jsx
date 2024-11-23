@@ -8,7 +8,7 @@ const AddProduct = () => {
     const [productDetails, setProductDetails] = useState({
         name: "",
         image: "",
-        category: "women",
+        category: "Fruits",
         new_price: "", 
         old_price: "",
     });
@@ -70,9 +70,9 @@ const AddProduct = () => {
         <div className='mb-3 flex items-center gap-x-4'>
             <h4 className="bold-18 pb-2">Product Category:</h4>
             <select value={productDetails.category} onChange={changeHandler} name="category" id="" className='bg-primary ring-1 ring-slate-900/20 medium-16 rounded-sm outline-none'>
-                <option value="Women">Women</option>
-                <option value="Men">Men</option>
-                <option value="kid">Kid</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Grains">Grains</option>
             </select>
         </div>
         <div>

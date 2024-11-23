@@ -3,8 +3,17 @@ import Sidebar from '../components/Sidebar'
 import { Routes, Route } from "react-router-dom"
 import AddProduct from '../components/AddProduct'
 import ListProduct from '../components/ListProduct'
+import { useEffect } from 'react'
 
 const Admin = () => {
+
+  useEffect(() => {
+    const token = localStorage.getItem('auth-token');
+    if (!token) {
+      window.location.replace('/login');
+    }
+  }, []);
+
   return (
     <div className='lg:flex'>
         <Sidebar />

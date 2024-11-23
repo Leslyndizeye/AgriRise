@@ -4,7 +4,7 @@ import product_rt_2 from "../assets/product_rt_2.png";
 import product_rt_3 from "../assets/product_rt_3.png";
 import product_rt_4 from "../assets/product_rt_4.png";
 import {MdStar} from "react-icons/md";
-import { ShopContext } from "../Context/ShopContext";
+import { ShopContext } from "../pages/Context/ShopContext";
 
 const ProductDisplay = (props) => {
 
@@ -53,7 +53,7 @@ const ProductDisplay = (props) => {
                         <button onClick={ () => {addToCart(product.id)}} className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest">Add to cart</button>
                         <button className="btn_dark_rounded !rounded-none uppercase regular-14 tracking-widest">Order it now</button>
                     </div>
-                    <p><span className="medium-16 text-tertiary">Category :</span>Women | Jacket | Winter</p>
+                    <p><span className="medium-16 text-tertiary">Category :</span>Fruits | Jacket | Winter</p>
                     <p><span className="medium-16 text-tertiary">Tags:</span>Modern | Latest</p>
                     
                 </div>

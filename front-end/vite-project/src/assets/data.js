@@ -67,7 +67,7 @@ export const LATEST = [
   },
   {
     id: 7,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Vegetables Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     image: p7_img,
     new_price: 60.0,
     old_price: 100.5,
@@ -81,7 +81,7 @@ export const LATEST = [
   },
   {
     id: 9,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Vegetables Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     image: p9_img,
     new_price: 50.0,
     old_price: 80.5,
@@ -95,7 +95,7 @@ export const LATEST = [
   },
   {
     id: 11,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Vegetables Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     image: p11_img,
     new_price: 60.0,
     old_price: 100.5,

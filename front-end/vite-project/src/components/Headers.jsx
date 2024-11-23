@@ -3,10 +3,10 @@ import { useContext, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import logout from "../assets/logout.svg";
 import user from "../assets/user.svg";
-import { ShopContext } from "../Context/ShopContext";
+import { ShopContext } from "../pages/Context/ShopContext";
 
 const Header = () => {
     const [menuOpened, setMenuOpened] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
             <div className="px-4 flexBetween py-3 max-x5:px-2">
                 {/* Logo */}
                 <div>
-                    <Link to="/"><img src={logo} alt="Logo" height={66} width={88} /></Link>
+                    <Link to="/"><img src={logo} alt="Logo" height={70} width={110} /></Link>
                 </div>
                 
                 {/* Navbar Desktop */}
@@ -46,7 +46,7 @@ const Header = () => {
                         
                         {localStorage.getItem('auth-token') ? <NavLink onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace("/")}} to={'logout'} className={"btn_secondary_rounded flexCenter gap-x-2 medium-16"}>logout<img src={logout} alt="logutIcon" height={19} width={19} />
                         </NavLink> :
-                        <NavLink to="login" className="btn_secondary_rounded flexCenter gap-x-2 medium-16">
+                        <NavLink to="login" className="btn_secondary_rounded flexCenter gap-x-2 medium-16" style={{ backgroundColor: "green", color: "white" }}>
                             <img src={user} alt="User Icon" height={19} width={19} />Login
                         </NavLink>}
                     </div>

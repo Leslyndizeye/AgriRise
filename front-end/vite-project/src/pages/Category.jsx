@@ -1,7 +1,7 @@
 import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 import Item from "../components/Item"
 import { useContext } from "react"
-import { ShopContext } from "../Context/ShopContext"
+import { ShopContext } from "./Context/ShopContext"
 
 const Category = ({category, banner}) => {
 

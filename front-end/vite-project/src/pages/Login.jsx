@@ -25,16 +25,24 @@ const Login = () => {
                 body: JSON.stringify(formData),
             });
             responseData = await response.json();
+            console.log(responseData);
     
             if (responseData.success) {
+                const userData = JSON.stringify(responseData.user);
                 localStorage.setItem("auth-token", responseData.token);
-                window.location.replace("/");
+                localStorage.setItem("user-data", userData);
+
+                if (userData.role === "admin") {
+                    window.location.replace("/listproduct");
+                } else {
+                    window.location.replace("/");
+                }
             } else {
                 alert(responseData.errors);
             }
         } catch (error) {
             console.error("Error during login:", error);
-            alert("Something went wrong. Please try again later.");
+            // alert("Something went wrong. Please try again later.");
         }
     };
     

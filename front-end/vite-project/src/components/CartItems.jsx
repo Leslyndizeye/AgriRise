@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ShopContext } from '../Context/ShopContext'
+import { ShopContext } from '../pages/Context/ShopContext'
 import {TbTrash} from 'react-icons/tb';
 
 
