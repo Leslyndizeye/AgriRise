@@ -1,4 +1,3 @@
-
 const Offer = () => {
   return (
     <section className="bg-banneroffer bg-cover bg-center w-full px-4 py-24 mt-16">
