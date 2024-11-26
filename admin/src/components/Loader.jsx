@@ -1,14 +1,14 @@
 import React from 'react';
-import './Loader.css'; // Add your loader styles here
+import './Loader.css'; // Make sure to link the correct CSS file
+import image from '../assets/logo.png';
 
-const Loader = () => {
+function Loader() {
   return (
     <div className="loader-container">
-      <div className="loader">
-        <span>Removed</span>
-      </div>
+      <img src={image} alt="Logo" className="logo" />
+      <div className="loader"></div>
     </div>
   );
-};
+}
 
 export default Loader;

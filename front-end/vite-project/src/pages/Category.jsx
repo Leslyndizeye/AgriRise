@@ -8,10 +8,10 @@ const Category = ({category, banner}) => {
     const {all_products} = useContext(ShopContext);
 
     return (
-        <section className = "max_padd_container py-12 xl:py-28">
+        <section className = "max_padd_container py-12 xl:py-24">
             <div>
                 <div>
-                    <img src={banner} alt="banner" className="block my-7 mx-auto"/>
+                    <img src={banner} alt="banner" className="block  mx-auto xl:w-[88%] w-full h-[450px]"/>
 
                 </div>
                 <div className="flexBetween my-8 mx-2">

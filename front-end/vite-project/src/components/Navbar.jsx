@@ -9,9 +9,9 @@ const Navbar = ({ containerStyles }) => {
             <NavLink to={'/Vegetables'}className={({isActive}) => isActive ? "active_link" : ""}><div className="flexCenter gap-x-1"><MdCategory />Vegetables</div></NavLink>
             <NavLink to={'/Fruits'}className={({isActive}) => isActive ? "active_link" : ""}><div className="flexCenter gap-x-1"><MdShop2 />Fruits</div></NavLink>
             <NavLink to={'/Grains'}className={({isActive}) => isActive ? "active_link": "" }><div className="flexCenter gap-x-1"><MdContacts />Grains</div></NavLink>
+            <NavLink to ={'/About'}className={({isActive}) => isActive ? "active_link" : ""}><div className="flexCenter gap-x-1"><MdContacts />About Us</div></NavLink>
         </nav>
-        
-    );
-};
+    )
+}
 
 export default Navbar;

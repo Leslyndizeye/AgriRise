@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <section className="relative bg-hero bg-cover bg-center bg-no-repeat h-screen w-full pb-12">
-      <div className='max_padd_container relative top-32 xs:top-52'>
+      <div className='max_padd_container relative top-16 xs:top-36'>
         {/* Title with AOS animation */}
         <h1 
           data-aos="fade-down"

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const ProductDescription = () => {
   return (
@@ -10,14 +10,14 @@ const ProductDescription = () => {
         </div>
         <div className='flex flex-col pb-16'>
             <p className='text-sm'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta, voluptas animi reiciendis odit totam ad, voluptatibus quae reprehenderit perferendis distinctio inventore voluptatum praesentium facilis sequi, iste voluptate maxime. Quis.
+                At AgriRise, we provide products designed to improve farming efficiency and sustainability. Our offerings include premium quality seeds, fertilizers, irrigation systems, and tools for modern agriculture. Each product is crafted to help farmers optimize their yield while protecting the environment and ensuring long-term soil health.
             </p>
             <p className='text-sm'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia inventore in saepe dolor numquam, voluptatum itaque, et atque rerum mollitia cupiditate. Magni nulla fuga et sint ea? Corrupti, exercitationem?
+                From high-yielding seed varieties to organic fertilizers and efficient irrigation systems, our products are created with the goal of enhancing food security and supporting sustainable agricultural practices. AgriRise products are specifically chosen to help farmers adapt to changing climate conditions and maximize their productivity.
             </p>
         </div>
     </div>
   )
 }
 
-export default ProductDescription
+export default ProductDescription;

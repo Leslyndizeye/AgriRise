@@ -14,8 +14,8 @@ const CartItems = () => {
                         <tr className='bg-slate-900/10 regular-18 sm:regular-22 text-start py-12'>
                             <th className='p-1 py-2'>Products</th>
                             <th className='p-1 py-2'>Title</th>
-                            <th className='p-1 py-2'>Price</th>
-                            <th className='p-1 py-2'>Quantity</th>
+                            <th className='p-1 py-2'>1kg/Price</th>
+                            <th className='p-1 py-2'>Avalaible quantity</th>
                             <th className='p-1 py-2'>Total</th>
                             <th className='p-1 py-2'>Remove</th>
                         </tr>
@@ -27,11 +27,11 @@ const CartItems = () => {
                                     <td className='flexCenter'><img src={e.image} alt="prdctImg" height={43} width={43} className='rounded-lg ring-1 ring-slate-900/5 my-1'/>
                                     </td>
                                     <td><div className='line-clamp-3'>{e.name}</div></td>
-                                    <td>${e.new_price}</td>
+                                    <td>{e.new_price}Rwf</td>
                                     <td className='w-16 h-16 bg-white'>{cartItems[e.id]}</td>
-                                    <td>${e.new_price * cartItems[e.id]}</td>
+                                    <td>{e.new_price * cartItems[e.id]} Rwf</td>
                                     <td>
-                                        <div className='bold-22 pl-14'><TbTrash onClick={()=> removeFromCart(e.id) } /></div>
+                                        <div className='bold-22 pl-14 cursor-pointer'><TbTrash onClick={()=> removeFromCart(e.id) } /></div>
                                     </td>
                                     
                                     
