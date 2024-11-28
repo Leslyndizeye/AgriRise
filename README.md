@@ -167,7 +167,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - If you encounter any issues during setup or need help with configuration, feel free to raise an issue in the repository.
 
 ---
-```
 
 ### Instructions for usage:
 1. Create a new file in your project’s root directory called `README.md` if it doesn't already exist.
@@ -175,3 +174,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. Customize any section if necessary, especially where you mention the database (if you're using something specific) or additional configuration steps that might be required for your project.
 
 Let me know if you need any more adjustments!
+
+
