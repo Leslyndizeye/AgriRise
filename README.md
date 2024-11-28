@@ -1,6 +1,3 @@
-Here’s the **complete code** for your `README.md` file, ready to be added to your project repository:
-
-```markdown
 # **AgriRise**
 
 AgriRise is a full-stack e-commerce platform designed to connect Rwandan farmers with buyers, facilitating the sale of agricultural products and enhancing market access. This platform offers an easy way for farmers to list their products, access a broader marketplace, and increase their income.
@@ -52,7 +49,7 @@ To get started with **AgriRise**, follow the steps below to clone and run the pr
 1. Clone the repository:
    ```bash
    git clone https://github.com/Leslyndizeye/AgriRise.git
-   ```
+
 
 2. Navigate to the backend directory:
    ```bash
