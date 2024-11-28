@@ -32,19 +32,19 @@ const Header = () => {
                 {/* Buttons */}
                 <div className="flexBetween sm:gap-x-2 bold-16">
                     {!menuOpened ? (
-                        <MdMenu className="md:hidden cursor-pointer hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full" onClick={toggleMenu} />
+                        <MdMenu className="md:hidden cursor-pointer hover:text-[green] mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full" onClick={toggleMenu} />
                     ) : (
-                        <MdClose className="md:hidden cursor-pointer hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full" onClick={toggleMenu} />
+                        <MdClose className="md:hidden cursor-pointer hover:text-[green] mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full" onClick={toggleMenu} />
                     )}
                     <div className="flexBetween sm:gap-x-6">
                         <NavLink to="cart-page" className="flex">
                             <FaOpencart className="p-1 h-8 w-8 ring-1 ring-slate-900/30 rounded-full" />
-                            <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-white medium-14 -top-2">
+                            <span className="relative flexCenter w-5 h-5 rounded-full bg-[green] text-white medium-14 -top-2">
                                 {getTotalCartItems()}
                             </span>
                         </NavLink>
                         
-                        {localStorage.getItem('auth-token') ? <NavLink onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace("/")}} to={'logout'} className={"btn_secondary_rounded flexCenter gap-x-2 medium-16"}>logout<img src={logout} alt="logutIcon" height={19} width={19} />
+                        {localStorage.getItem('auth-token') ? <NavLink onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace("/")}} to={'logout'} className={"btn_secondary_rounded bg-[green] flexCenter gap-x-2 medium-16"}>logout<img src={logout} alt="logutIcon" height={19} width={19} />
                         </NavLink> :
                         <NavLink to="login" className="btn_secondary_rounded flexCenter gap-x-2 medium-16" style={{ backgroundColor: "green", color: "white" }}>
                             <img src={user} alt="User Icon" height={19} width={19} />Login

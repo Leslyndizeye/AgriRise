@@ -15,7 +15,7 @@ const CartItems = () => {
                             <th className='p-1 py-2'>Products</th>
                             <th className='p-1 py-2'>Title</th>
                             <th className='p-1 py-2'>1kg/Price</th>
-                            <th className='p-1 py-2'>Avalaible quantity</th>
+                            <th className='p-1 py-2'>Quantity</th>
                             <th className='p-1 py-2'>Total</th>
                             <th className='p-1 py-2'>Remove</th>
                         </tr>

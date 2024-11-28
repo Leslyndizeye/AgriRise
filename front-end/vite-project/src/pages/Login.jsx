@@ -16,7 +16,7 @@ const Login = () => {
         console.log("Login function executed", formData);
         let responseData;
         try {
-            const response = await fetch("https://agririse-4.onrender.com/login", {
+            const response = await fetch("http://localhost:4000/login", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -51,7 +51,7 @@ const Login = () => {
         console.log("Signup function executed", formData);
         let responseData;
         try {
-            const response = await fetch("https://agririse-4.onrender.com/signup", {
+            const response = await fetch("http://localhost:4000/signup", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",

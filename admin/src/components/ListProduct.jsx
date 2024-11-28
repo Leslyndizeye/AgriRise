@@ -9,7 +9,7 @@ const ListProduct = () => {
   const [messageVisible, setMessageVisible] = useState(false); // State to control message visibility
 
   const fetchInfo = async () => {
-    await fetch('https://agririse-4.onrender.com/allproducts')
+    await fetch('http://localhost:4000/allproducts')
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -22,7 +22,7 @@ const ListProduct = () => {
 
   const removeProduct = async (id) => {
     setLoading(true); // Show loader
-    await fetch('https://agririse-4.onrender.com/removeproduct', {
+    await fetch('http://localhost:4000/removeproduct', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
