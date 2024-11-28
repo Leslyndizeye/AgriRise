@@ -15,6 +15,7 @@ import AdminDashboard from './admin/AdminDashboard';
 import UsersDashboard from './admin/UsersDashboard';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './PrivateRoute'; // Import the PrivateRoute component
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/logins" element={<LoginPage />} /> {/* Correct route for login */}
         <Route path="/cart-page" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/about" element={<About />} />
 
         {/* Use PrivateRoute to protect admin and users pages */}
