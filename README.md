@@ -1,178 +1,110 @@
-# **AgriRise**
+# AgriRise Project
 
-AgriRise is a full-stack e-commerce platform designed to connect Rwandan farmers with buyers, facilitating the sale of agricultural products and enhancing market access. This platform offers an easy way for farmers to list their products, access a broader marketplace, and increase their income.
+AgriRise is an e-commerce platform designed to help farmers access agricultural products and services. It includes a user interface for both farmers and admins, a backend for managing data, and utilizes MongoDB Atlas for the database.
 
----
+## Features
+- **Admin Panel**: Manage products, users, and more.
+- **Farmer Dashboard**: A user-friendly interface for farmers to purchase products.
+- **User Login/Signup**: Authentication for both users and admins.
 
-## **Table of Contents**
+## Project Setup
 
-- [Project Overview](#project-overview)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
-  - [Admin Setup](#admin-setup)
-- [Running the Application](#running-the-application)
-  - [Backend](#backend)
-  - [Frontend](#frontend)
-  - [Admin](#admin)
-- [Contributing](#contributing)
-- [License](#license)
+### 1. Backend Setup
 
----
+#### Requirements:
+- Node.js (v16 or higher)
+- MongoDB Atlas Account
+- Express.js
 
-## **Project Overview**
+#### Steps:
+1. **Navigate to the `backend` folder**:
+    ```bash
+    cd backend
+    ```
 
-AgriRise aims to empower Rwandan farmers by providing them with an e-commerce platform to sell their agricultural products. The platform includes:
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-- A **backend** for handling product listings, transactions, and user authentication.
-- A **frontend** for buyers and farmers to interact with the platform, including searching for products and managing the shopping cart.
-- An **admin panel** for managing the platform’s users, products, and orders.
+3. **Create a `.env` file in the `backend` folder** and add the following environment variables:
+    ```env
+    MONGO_URI=mongodb://AgriRise:l2wDepUwTUXBmizU@cluster0-shard-00-00.viifw.mongodb.net:27017,cluster0-shard-00-01.viifw.mongodb.net:27017,cluster0-shard-00-02.viifw.mongodb.net:27017/AgriRise?ssl=true&replicaSet=atlas-14ddpe-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
+    JWT_SECRET=l2wDepUwTUXBmizU
+    PORT=your_preferred_port (e.g. 4000)
+    ```
 
----
+4. **Start the Backend**:
+    ```bash
+    node index.js
+    ```
+    Your backend will now be running on the specified port (e.g., `http://localhost:5000`).
 
-## **Tech Stack**
+### 2. Frontend Setup
 
-- **Backend**: Node.js, Express.js
-- **Frontend**: React, Vite.js, Tailwind CSS
-- **Admin Panel**: React, Vite.js, Tailwind CSS
-- **Database**: MongoDB(Atlas Mongodb)
+#### Requirements:
+- Node.js (v16 or higher)
 
----
+#### Steps:
+1. **Navigate to the `front-end` folder**:
+    ```bash
+    cd front-end/vite-project
+    ```
 
-## **Installation**
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-To get started with **AgriRise**, follow the steps below to clone and run the project on your local machine.
+3. **Start the Frontend**:
+    ```bash
+    npm run dev
+    ```
+    Your frontend will now be running at `http://localhost:3000` or whichever port Vite assigns.
 
-### **Backend Setup**
+### 3. Admin Setup
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Leslyndizeye/AgriRise.git
+#### Requirements:
+- Admin URL for login and dashboard
 
+#### Steps:
+1. **Navigate to the Admin Panel**:
+    Visit the admin login page at [https://agririseweb.netlify.app/logins](https://agririseweb.netlify.app/logins).
 
-2. Navigate to the backend directory:
-   ```bash
-   cd AgriRise/backend
-   ```
+2. **Login as Admin**:
+    Use the admin credentials provided to access the admin dashboard and manage the platform.
 
-3. Install the required dependencies:
-   ```bash
-   npm install
-   ```
+3. **Run Admin in Development Mode**:
+    If you're running it locally, navigate to the `admin` folder and run the following:
+    ```bash
+    npm run dev
+    ```
 
-4. Start the backend server:
-   ```bash
-   node index.js
-   ```
+### 4. URLs
 
-The backend will now be running locally.
+- **Admin Login**: [https://agririseweb.netlify.app/logins](https://agririseweb.netlify.app/logins)
+- **User Homepage**: [https://agririseweb.netlify.app/](https://agririseweb.netlify.app/)
+- **Farmer Dashboard**: [https://web-agririse.netlify.app/](https://web-agririse.netlify.app/)
 
----
+### 5. Testing API Endpoints
 
-### **Frontend Setup**
+You can use **Thunder Client** or **Postman** to test the backend API endpoints.
 
-1. Navigate to the frontend project directory:
-   ```bash
-   cd AgriRise/front-end/vite-project
-   ```
+- **Base URL for API**: `http://localhost:5000` (or the URL of your backend server if deployed)
 
-2. Install the required dependencies:
-   ```bash
-   npm install
-   ```
+### 6. Deploying on Netlify
 
-3. Start the frontend development server:
-   ```bash
-   npm run dev
-   ```
-
-Your frontend will now be accessible at [http://localhost:3000](http://localhost:3000).
-
----
-
-### **Admin Setup**
-
-1. Navigate to the admin panel directory:
-   ```bash
-   cd AgriRise/admin
-   ```
-
-2. Install the required dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the admin panel:
-   ```bash
-   npm run dev
-   ```
-
-The admin panel will now be accessible at [http://localhost:5173](http://localhost:5173).
+Both the **admin panel** and the **user interface** are deployed on **Netlify** for live usage. The **backend** can be deployed on services like **Heroku**, **Render**, or any cloud provider with Node.js support.
 
 ---
 
-## **Running the Application**
+## Technologies Used
 
-Now that you have set up the backend, frontend, and admin panel, follow these steps to run the entire application.
+- **Frontend**: React, Vite, Tailwind CSS
+- **Backend**: Express.js, Node.js, MongoDB Atlas
+- **Authentication**: JWT (JSON Web Tokens)
+- **Deployment**: Netlify (for frontend and admin), MongoDB Atlas (for database)
 
-### **Backend**
-
-1. Start the backend server (if not already running):
-   ```bash
-   cd AgriRise/backend
-   node index.js
-   ```
-
-### **Frontend**
-
-1. Start the frontend development server (if not already running):
-   ```bash
-   cd AgriRise/front-end/vite-project
-   npm run dev
-   ```
-
-### **Admin**
-
-1. Start the admin panel (if not already running):
-   ```bash
-   cd AgriRise/admin
-   npm run dev
-   ```
-
----
-
-## **Contributing**
-
-If you’d like to contribute to the AgriRise project, feel free to submit issues or pull requests. We welcome contributions to help improve the platform for farmers and buyers.
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes and commit them (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new pull request.
-
----
-
-## **License**
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-### Notes:
-
-- Make sure all the environment variables and database connections are properly set up.
-- The frontend, backend, and admin panel are developed independently, but they work together when running the full application.
-- If you encounter any issues during setup or need help with configuration, feel free to raise an issue in the repository.
-
----
-
-### Instructions for usage:
-1. Create a new file in your project’s root directory called `README.md` if it doesn't already exist.
-2. Paste the provided code into the new file.
-3. Customize any section if necessary, especially where you mention the database (if you're using something specific) or additional configuration steps that might be required for your project.
-
-Let me know if you need any more adjustments!
-
-
