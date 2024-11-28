@@ -36,7 +36,7 @@ AgriRise aims to empower Rwandan farmers by providing them with an e-commerce pl
 - **Backend**: Node.js, Express.js
 - **Frontend**: React, Vite.js, Tailwind CSS
 - **Admin Panel**: React, Vite.js, Tailwind CSS
-- **Database**: (Add your database here, e.g., MongoDB, MySQL, etc.)
+- **Database**: MongoDB(Atlas Mongodb)
 
 ---
 
