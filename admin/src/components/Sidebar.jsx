@@ -1,25 +1,36 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import addProduct from "../assets/addproduct.png"
-import listProduct from "../assets/productlist.png"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineHome, AiOutlineAppstore } from 'react-icons/ai';
+import { GiFarmer } from 'react-icons/gi';
+import { FiCloud } from 'react-icons/fi'; // Import weather icon
 
 const Sidebar = () => {
   return (
-    <div className='py-7 flex justify-center gap-x-1 gap-y-5 w-full bg-white sm:gap-x-4 lg:flex-col lg:pt-20 lg:max-w-60 lg:h-screen lg:justify-start lg:pl-6'>
-        <Link to={'/addproduct'}>
-            <button className='flexCenter gap-2 rounded-md bg-primary h-12 w-40 xs:w-44 medium-16'>
-                <img src={addProduct} alt="" height={50} width={50}/>
-                <span>Add Product</span>
-            </button>
-        </Link>
-        <Link to={'/listproduct'}>
-            <button className='flexCenter gap-2 rounded-md bg-primary h-12 w-40 xs:w-44 medium-16'>
-                <img src={listProduct} alt="" height={50} width={50}/>
-                <span>Product List</span>
-            </button>
-        </Link>
+    <div className="h-fixed w-[400px] bg-gray-800 text-white">
+      <ul className="mt-4">
+        <li className="p-3 hover:bg-gray-700">
+          <Link to="/listproduct" className="flex items-center">
+            <AiOutlineAppstore className="mr-3" /> Products
+          </Link>
+        </li>
+        <li className="p-3 hover:bg-gray-700">
+          <Link to="/addproduct" className="flex items-center">
+            <AiOutlineHome className="mr-3" /> Add Product
+          </Link>
+        </li>
+        <li className="p-3 hover:bg-gray-700">
+          <Link to="/expert" className="flex items-center">
+            <GiFarmer className="mr-3" /> Expert Tips
+          </Link>
+        </li>
+        <li className="p-3 hover:bg-gray-700">
+          <Link to="/weather" className="flex items-center">
+            <FiCloud className="mr-3" /> Weather
+          </Link>
+        </li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

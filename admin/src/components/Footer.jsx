@@ -4,8 +4,8 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-700 text-white py-10 px-4">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+    <footer className="bg-green-700 text-white py-24 px-4">
+      <div className="container max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center">
         {/* Left Section: AgriRise Brand */}
         <div className="flex flex-col items-center lg:items-start">
           <img 
@@ -20,15 +20,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Section: Quick Links */}
-        <div className="flex flex-col mt-8 lg:mt-0">
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/about" className="hover:underline">About Us</a></li>
-            <li><a href="/services" className="hover:underline">Our Services</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
-          </ul>
-        </div>
+
 
         {/* Right Section: Social Media */}
         <div className="flex flex-col mt-8 lg:mt-0 items-center lg:items-end">

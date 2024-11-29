@@ -150,16 +150,19 @@ app.post('/signup', async(req, res) => {
     if(check){
         return res.status(400).json({success: false, errors: "Existing user found with same email address"});
     }
-    let cart = {};
-    for (let i = 0; i < 300; i++){
-        cart[i] = 0;
-    }
-    const user = new User({
-        name: req.body.username,
-        email: req.body.email,
-        password: req.body.password,
-        cartData: cart,
-    });
+// During user signup, initialize cartData properly
+        let cart = {};
+        for (let i = 0; i < 300; i++) {
+            cart[i] = 0;  // or initialize it to any value based on your need
+        }
+
+        const user = new User({
+            name: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+            cartData: cart,  // Make sure cartData is initialized properly
+        });
+
     await user.save();
 
     const data = {

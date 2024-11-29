@@ -107,6 +107,22 @@ const Checkout = () => {
           {paymentMessage}
         </div>
       )}
+
+      {/* MTN Mobile Money Section */}
+      <div className="mt-8">
+        <h3 className="text-xl font-semibold mb-4">MTN Mobile Money Payment</h3>
+        <div className="flex items-center space-x-4">
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/New-mtn-logo.jpg/640px-New-mtn-logo.jpg"  // Updated logo source
+            alt="MTN Logo" 
+            className="w-16 h-16"
+          />
+          <div>
+            <p className="font-semibold text-lg">Use the MTN MoMo code below to pay:</p>
+            <p className="text-xl font-bold text-green-600">*182*8*1*0008#</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
