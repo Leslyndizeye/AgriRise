@@ -111,7 +111,7 @@ const AdminDashboard = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-bold text-gray-800">Total Orders</h2>
-              <p className="mt-2 text-3xl font-bold text-blue-500">2</p>
+              <p className="mt-2 text-3xl font-bold text-blue-500">0</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-bold text-gray-800">Active Users</h2>
