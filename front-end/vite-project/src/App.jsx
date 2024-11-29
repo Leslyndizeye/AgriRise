@@ -16,6 +16,7 @@ import UsersDashboard from './admin/UsersDashboard';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './PrivateRoute'; // Import the PrivateRoute component
 import Checkout from './components/Checkout';
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function AppRoutes() {
         <Route path="/cart-page" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Use PrivateRoute to protect admin and users pages */}
         <Route path="/admin" element={<PrivateRoute element={<AdminDashboard />} />} />

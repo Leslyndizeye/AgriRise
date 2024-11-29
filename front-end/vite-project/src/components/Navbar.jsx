@@ -10,6 +10,7 @@ const Navbar = ({ containerStyles }) => {
             <NavLink to={'/Fruits'}className={({isActive}) => isActive ? "active_link" : ""}><div className="flexCenter gap-x-1"><MdShop2 />Fruits</div></NavLink>
             <NavLink to={'/Grains'}className={({isActive}) => isActive ? "active_link": "" }><div className="flexCenter gap-x-1"><MdContacts />Grains</div></NavLink>
             <NavLink to ={'/About'}className={({isActive}) => isActive ? "active_link" : ""}><div className="flexCenter gap-x-1"><MdContacts />About Us</div></NavLink>
+            <NavLink to={'/Contact'}className={({isActive}) => isActive ? "active_link" : ""}><div className="flexCenter gap-x-1"><MdContacts />Contact Us</div></NavLink>
         </nav>
     )
 }
