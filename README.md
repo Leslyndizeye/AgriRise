@@ -48,7 +48,7 @@ AgriRise is an e-commerce platform designed to help farmers access agricultural 
 #### Steps:
 1. **Navigate to the `front-end` folder**:
     ```bash
-    cd front-end/vite-project
+    cd front-end/vite-project/src
     ```
 
 2. **Install Dependencies**:
