@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaSpinner } from 'react-icons/fa'; // Import spinner for loader
 
 const Login = () => {
     const [state, setState] = useState("Login");
@@ -7,12 +8,16 @@ const Login = () => {
         password: "",
         email: ""
     });
+    const [loading, setLoading] = useState(false); // State for loading spinner
+    const [responseMessage, setResponseMessage] = useState(""); // State for success/error message
 
     const changeHandler = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const login = async () => {
+        setLoading(true); // Start loading
+        setResponseMessage(""); // Clear any previous messages
         console.log("Login function executed", formData);
         let responseData;
         try {
@@ -31,23 +36,26 @@ const Login = () => {
                 const userData = JSON.stringify(responseData.user);
                 localStorage.setItem("auth-token", responseData.token);
                 localStorage.setItem("user-data", userData);
-
+    
                 if (userData.role === "admin") {
                     window.location.replace("/listproduct");
                 } else {
                     window.location.replace("/");
                 }
+                setResponseMessage("Login successful!");
             } else {
-                alert(responseData.errors);
+                setResponseMessage(`Error: ${responseData.errors}`);
             }
         } catch (error) {
             console.error("Error during login:", error);
-            // alert("Something went wrong. Please try again later.");
+            setResponseMessage("Something went wrong. Please try again later.");
         }
+        setLoading(false); // Stop loading
     };
     
-
     const signup = async () => {
+        setLoading(true); // Start loading
+        setResponseMessage(""); // Clear any previous messages
         console.log("Signup function executed", formData);
         let responseData;
         try {
@@ -64,13 +72,15 @@ const Login = () => {
             if (responseData.success) {
                 localStorage.setItem("auth-token", responseData.token);
                 window.location.replace("/");
+                setResponseMessage("Signup successful!");
             } else {
-                alert(responseData.errors);
+                setResponseMessage(`Error: ${responseData.errors}`);
             }
         } catch (error) {
             console.error("Error during signup:", error);
-            alert("Something went wrong. Please try again later.");
+            setResponseMessage("Something went wrong. Please try again later.");
         }
+        setLoading(false); // Stop loading
     };
 
     return (
@@ -108,9 +118,17 @@ const Login = () => {
                 <button
                     onClick={() => (state === "Login" ? login() : signup())}
                     className="btn_dark_rounded my-5 w-full !rounded-md"
+                    disabled={loading} // Disable button when loading
                 >
-                    Continue
+                    {loading ? (
+                        <FaSpinner className="animate-spin" /> // Spinner while loading
+                    ) : (
+                        "Continue"
+                    )}
                 </button>
+                {responseMessage && (
+                    <p className="text-black font-bold mt-3">{responseMessage}</p> // Show success/error message
+                )}
                 {state === "Sign Up" ? (
                     <p className="text-black font-bold">
                         Already have an account?{" "}

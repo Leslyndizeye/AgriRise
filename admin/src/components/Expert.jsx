@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { GiPotato, GiWheat, GiTomato, GiCorn, GiCarrot, GiBanana } from "react-icons/gi"; // Removed GiRice
+import {
+  GiPotato,
+  GiWheat,
+  GiTomato,
+  GiCorn,
+  GiCarrot,
+  GiBanana,
+  GiFruitBowl,
+  GiGrapes,
+  GiCabbage,
+  GiPeach,
+} from "react-icons/gi";
 
 const Expert = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -12,6 +23,7 @@ const Expert = () => {
       description:
         "Plant Irish potatoes in well-drained, fertile soil. They need full sun and regular watering. Use certified seed potatoes for best results.",
       icon: <GiPotato size={50} className="text-green-500" />,
+      videoLink: "https://youtu.be/d5ni1TT9EG4?si=M7ruoOZQ3CqXswDP",
     },
     {
       id: 2,
@@ -20,6 +32,7 @@ const Expert = () => {
       description:
         "Sow maize seeds directly in soil with good drainage. Ensure proper spacing for healthy growth. Requires plenty of sunlight and moderate watering.",
       icon: <GiWheat size={50} className="text-yellow-500" />,
+      videoLink: "https://youtu.be/nfMLKP1nXK0?si=LdHBxqNySdLxC_LN",
     },
     {
       id: 3,
@@ -28,6 +41,7 @@ const Expert = () => {
       description:
         "Tomatoes thrive in warm climates with well-drained soil. Stake plants for support and water consistently to prevent cracking.",
       icon: <GiTomato size={50} className="text-red-500" />,
+      videoLink: "https://youtu.be/9w-7RoH_uic?si=ZGqyiWVuEZgz74PN",
     },
     {
       id: 4,
@@ -36,6 +50,7 @@ const Expert = () => {
       description:
         "Corn requires full sun and fertile, well-drained soil. Water regularly and ensure proper spacing for healthy growth.",
       icon: <GiCorn size={50} className="text-yellow-600" />,
+      videoLink: "https://www.youtube.com/watch?v=corn-growing-techniques",
     },
     {
       id: 5,
@@ -44,38 +59,52 @@ const Expert = () => {
       description:
         "Carrots grow well in loose, sandy soil. Thin seedlings to ensure enough space for roots to develop properly.",
       icon: <GiCarrot size={50} className="text-orange-500" />,
+      videoLink: "https://www.youtube.com/watch?v=carrot-cultivation-guide",
     },
     {
       id: 6,
-      name: "Rice",
-      category: "Grains",
-      description:
-        "Rice grows best in flooded fields. Maintain a steady water supply and fertile soil for a good harvest.",
-      icon: <GiWheat size={50} className="text-blue-500" />, // Using GiWheat as a placeholder
-    },
-    {
-      id: 7,
       name: "Bananas",
       category: "Fruits",
       description:
         "Bananas thrive in warm, humid climates. Provide rich soil, regular watering, and protection from strong winds.",
       icon: <GiBanana size={50} className="text-yellow-400" />,
+      videoLink: "https://youtu.be/SgFKfVfghpg?si=Xy5d8mU9vmDYmVty",
+    },
+    {
+      id: 7,
+      name: "Apples",
+      category: "Fruits",
+      description:
+        "Apples require cold climates, well-drained soil, and regular pruning. Plant dwarf or standard varieties for higher yield.",
+      icon: <GiFruitBowl size={50} className="text-red-400" />,
+      videoLink: "https://youtu.be/OwnUtnksO10?si=ACUpykYLBBCqU83b",
     },
     {
       id: 8,
-      name: "Sweet Potatoes",
-      category: "Vegetables",
+      name: "Grapes",
+      category: "Fruits",
       description:
-        "Sweet potatoes need warm temperatures and sandy, loamy soil. Water regularly and avoid overwatering.",
-      icon: <GiPotato size={50} className="text-purple-500" />,
+        "Grapes need warm, sunny climates and trellises for support. Prune vines regularly to improve fruit quality.",
+      icon: <GiGrapes size={50} className="text-purple-500" />,
+      videoLink: "https://youtu.be/8Ik7b6UcDP8?si=TD1a1gyUbXMZBR7v",
     },
     {
       id: 9,
-      name: "Onions",
+      name: "Cabbage",
       category: "Vegetables",
       description:
-        "Onions require well-drained soil and full sun. Keep the soil moist but not waterlogged for healthy growth.",
-      icon: <GiTomato size={50} className="text-yellow-700" />,
+        "Cabbage prefers cool weather and fertile, well-drained soil. Water consistently to prevent cracking.",
+      icon: <GiCabbage size={50} className="text-green-600" />,
+      videoLink: "https://youtu.be/C8wP9rnxlqs?si=ougTe5pqtaBaifnM",
+    },
+    {
+      id: 10,
+      name: "Peaches",
+      category: "Fruits",
+      description:
+        "Peaches need full sun and well-drained, fertile soil. Regular pruning and pest management are essential.",
+      icon: <GiPeach size={50} className="text-orange-400" />,
+      videoLink: "https://youtu.be/KkjyI03yrQs?si=CzaSSLXGuUTXaflP",
     },
   ];
 
@@ -105,6 +134,14 @@ const Expert = () => {
               <div className="mb-2">{crop.icon}</div>
               <h3 className="text-xl font-semibold">{crop.name}</h3>
               <p className="text-gray-600 mt-2">{crop.description}</p>
+              <a
+                href={crop.videoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 mt-3 underline"
+              >
+                Learn More
+              </a>
             </div>
           ))
         ) : (
